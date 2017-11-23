@@ -8,7 +8,9 @@ Small collection of tools for automating tasks with Bitbucket's API.
 
 ## Comments
 
-Automated creation of comments.
+Creates comments on a Bitbucket pull request for given checkstyle result XML files. This process will only comment on additional lines and will remove any comments made by itself in previous runs.
+
+It's optimized for consumption within an existing project but can be used independently. The only configuration file required is a credentials file. See authentication below for more information.
 
 ### Linter comments on Pull Request 
 
