@@ -1,0 +1,25 @@
+[
+	{
+		"fileName": "/Users/StudioProjects/my_app_android/App/src/main/res/layout/activity_stream_list_row.xml",
+		"errors": [
+			{
+				"line": 51,
+				"column": 25,
+				"message":
+					"**ERROR**: `onClick` method does not exist\n\nCorresponding method handler '`public void onActivityOwnerClicked(android.view.View)`' not found\n\n```\n                        bind:onClick=\"onActivityOwnerClicked\"\n                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n```\n\n**Why?** The `onClick` attribute value should be the name of a method in this View's context to invoke when the view is clicked. This name must correspond to a public method that takes exactly one parameter of type `View`.\n\nMust be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.\n\n[Category: Correctness, ID: OnClick, Priority: 10/10]"
+			},
+			{
+				"line": 141,
+				"column": 25,
+				"message":
+					"**ERROR**: `onClick` method does not exist\n\nCorresponding method handler '`public void onReplyButtonClicked(android.view.View)`' not found\n\n```\n                        bind:onClick=\"onReplyButtonClicked\"\n                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n```\n\n**Why?** The `onClick` attribute value should be the name of a method in this View's context to invoke when the view is clicked. This name must correspond to a public method that takes exactly one parameter of type `View`.\n\nMust be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.\n\n[Category: Correctness, ID: OnClick, Priority: 10/10]"
+			},
+			{
+				"line": 25,
+				"column": 9,
+				"message":
+					"**WARNING**: Using left/right instead of start/end attributes\n\nConsider replacing `android:paddingRight` with `android:paddingEnd=\"20dp\"` to better support right-to-left layouts\n\n```\n        android:paddingRight=\"20dp\"\n        ~~~~~~~~~~~~~~~~~~~~\n```\n\n**Why?** Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.\n\nFor XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.\n\n(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=\"start\"` rather than `gravity=\"left|start\"`.)\n\n[Category: Internationalization:Bidirectional Text, ID: RtlHardcoded, Priority: 5/10]"
+			}
+		]
+	}
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "fileName": "/app/htdocs/angular/js/components/invoice/create/invoice-create-services-row.directive.js",
+        "errors": [
+            {
+                "line": 29,
+                "column": 9,
+                "message": "**WARNING**: 'name' is assigned a value but never used. (no-unused-vars)\n\n[source: [eslint.rules.no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)]"
+            },
+            {
+                "line": 30,
+                "column": 3,
+                "message": "**ERROR**: 'name' is constant. (no-const-assign)\n\n[source: [eslint.rules.no-const-assign](http://eslint.org/docs/rules/no-const-assign)]"
+            }
+        ]
+    },
+    {
+        "fileName": "/app/htdocs/angular/js/components/popover/popover.component.js",
+        "errors": [
+            {
+                "line": 18,
+                "column": 20,
+                "message": "**WARNING**: Missing trailing comma. (comma-dangle)\n\n[source: [eslint.rules.comma-dangle](http://eslint.org/docs/rules/comma-dangle)]"
+            },
+            {
+                "line": 21,
+                "column": 17,
+                "message": "**WARNING**: Should use user defined title for \"client\" (custom/avoid-custom-module-names)\n\n[source: [eslint.rules.custom/avoid-custom-module-names](http://eslint.org/docs/rules/custom/avoid-custom-module-names)]"
+            },
+            {
+                "line": 27,
+                "column": 5,
+                "message": "**WARNING**: 'unused' is defined but never used. (no-unused-vars)\n\n[source: [eslint.rules.no-unused-vars](http://eslint.org/docs/rules/no-unused-vars)]"
+            }
+        ]
+    }
+]

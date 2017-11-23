@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="/app/htdocs/angular/js/components/invoice/create/invoice-create-services-row.directive.js">
+    <error line="29" column="9" severity="warning" message="'name' is assigned a value but never used. (no-unused-vars)" source="eslint.rules.no-unused-vars"/>
+    <error line="30" column="3" severity="error" message="'name' is constant. (no-const-assign)" source="eslint.rules.no-const-assign"/>
+</file>
+<file name="/app/htdocs/angular/js/components/popover/popover.component.js">
+<error line="18" column="20" severity="warning" message="Missing trailing comma. (comma-dangle)" source="eslint.rules.comma-dangle"/>
+<error line="21" column="17" severity="warning" message="Should use user defined title for &quot;client&quot; (custom/avoid-custom-module-names)" source="eslint.rules.custom/avoid-custom-module-names"/>
+<error line="27" column="5" severity="warning" message="'unused' is defined but never used. (no-unused-vars)" source="eslint.rules.no-unused-vars"/>
+</file>
+</checkstyle>
