@@ -13,3 +13,8 @@ tool for commenting on pull requests from linter results.
 
 **Enhancement**
 - Resolves #1 - Introduces `--fail-on-severity` option to the `comments` action.
+
+### 0.0.4
+
+**Fix**
+- Fix - `chalk` should be a production dependency.
