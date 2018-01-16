@@ -8,3 +8,8 @@ tool for commenting on pull requests from linter results.
 **Fixes**
 
 - Fixes #4 - Can't read attribute "username" on `null` when comparing existing `deleted` comment.
+
+### 0.0.3
+
+**Enhancement**
+- Resolves #1 - Introduces `--fail-on-severity` option to the `comments` action.
