@@ -12,6 +12,8 @@ Creates comments on a Bitbucket pull request for given checkstyle result XML fil
 
 It's optimized for consumption within an existing project but can be used independently. The only configuration file required is a credentials file. See authentication below for more information.
 
+Comments will only be left for lines located in the returned diff. This may not only include added and changed lines but lines around such ones. Keep this in mind when using the `--fail-on-severity` option. It may not only reflect lines touched by the author but lines around the touches.
+
 ### Linter comments on Pull Request 
 
 ```
@@ -27,6 +29,26 @@ Parses and leaves comments on a pull request for given lint results.
 * [Android Lint Result XML](http://tools.android.com/tips/lint) with `--android-lint`
 * [Checkstyle Result XML](http://checkstyle.sourceforge.net/) with `--checkstyle`
  * _Needs examples of tools that have checkstyle formatters. e.g, eslint_ 
+
+#### Options
+
+##### --pull-request
+
+The id of the pull request. This should match up with the user and repository slugs.
+
+##### --checkstyle
+
+One or more paths to checkstyle result XML files. This cannot be used in conjunction with `--android-lint`.
+
+##### --android-lint
+
+One or more paths to Android Lint result XML files. This cannot be used in conjunction with `--checkstyle`.
+
+##### --fail-on-severity
+
+Exit on a non-zero code to indicate that a given severity was seen in a comment. For example, fail if a comment is made for an "error". This is useful if you wish to fail a build process only if a certain severity was introduced.
+
+Severities are case insensitive.
 
 ## Reviewers
 
@@ -116,7 +138,7 @@ bitbucket-toolbox comments
 
 The message identifier defaults to `.:.`.
 
-# Options
+# Global Options
 
 ##### --repo-slug / config.repoSlug
 
@@ -125,18 +147,6 @@ The name of the bitbucket repository.
 ##### --repo-user / config.repoUser
 
 The username who owns the bitbucket repository containing the pull request.
-
-##### --pull-request
-
-The id of the pull request. This should match up with the user and repository slugs.
-
-##### --checkstyle
-
-One or more paths to checkstyle result XML files. This cannot be used in conjunction with `--android-lint`.
-
-##### --android-lint
-
-One or more paths to Android Lint result XML files. This cannot be used in conjunction with `--checkstyle`.
 
 ##### --credentials
 
