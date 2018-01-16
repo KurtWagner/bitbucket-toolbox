@@ -7,7 +7,8 @@
 	"license": "MIT",
 	"scripts": {
 		"test": "eslint . && mocha lib/*.js lib/*/**.js tests/**/*.js",
-		"coveralls": "nyc --all --reporter=lcovonly mocha lib/*.js lib/*/**.js tests/**/*.js && cat ./coverage/lcov.info | coveralls",
+		"coveralls":
+			"nyc --all --reporter=lcovonly mocha lib/*.js lib/*/**.js tests/**/*.js && cat ./coverage/lcov.info | coveralls",
 		"cover": "nyc --all --reporter=text mocha lib/*.js lib/*/**.js tests/**/*.js",
 		"precommit": "lint-staged"
 	},
@@ -15,21 +16,14 @@
 		"node": ">=6.0.0"
 	},
 	"nyc": {
-		"exclude": [
-			"**/*.spec.js"
-		]
+		"exclude": ["**/*.spec.js"]
 	},
 	"bin": {
 		"bitbucket-toolbox": "./bin/bitbucket-toolbox.js"
 	},
-	"keywords": [
-		"bitbucket",
-		"checkstyle",
-		"android-lint"
-	],
+	"keywords": ["bitbucket", "checkstyle", "android-lint"],
 	"devDependencies": {
 		"chai": "3.5.0",
-		"chalk": "2.3.0",
 		"coveralls": "2.11.16",
 		"eslint": "3.13.1",
 		"husky": "0.14.3",
@@ -46,6 +40,7 @@
 		"sinon": "2.0.0"
 	},
 	"dependencies": {
+		"chalk": "2.3.0",
 		"commander": "2.9.0",
 		"parse-diff": "0.4.0",
 		"q": "1.4.1",
@@ -53,9 +48,6 @@
 		"xml2js": "0.4.17"
 	},
 	"lint-staged": {
-		"*.{js,json}": [
-			"prettier-eslint --write",
-			"git add"
-		]
+		"*.{js,json}": ["prettier-eslint --write", "git add"]
 	}
 }
