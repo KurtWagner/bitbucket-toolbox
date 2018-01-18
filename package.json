@@ -42,7 +42,9 @@
 	"dependencies": {
 		"chalk": "2.3.0",
 		"commander": "2.9.0",
+		"node-emoji": "1.8.1",
 		"parse-diff": "0.4.0",
+		"progress": "2.0.0",
 		"q": "1.4.1",
 		"request": "2.79.0",
 		"xml2js": "0.4.17"

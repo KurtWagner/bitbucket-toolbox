@@ -2,20 +2,20 @@
 'use strict';
 
 const logger = require('../lib/logger');
-const {getConfig} = require('../lib/config');
-const {getArgs} = require('../lib/args');
-const {getCredentialsFromArgs} = require('../lib/credentials');
-const {dispatchAction} = require('../lib/actions');
+const { getConfig } = require('../lib/config');
+const { getArgs } = require('../lib/args');
+const { getCredentialsFromArgs } = require('../lib/credentials');
+const { dispatchAction } = require('../lib/actions');
 
-const {name, version} = require('../package.json');
+const { name, version } = require('../package.json');
 logger.title(`${name} ${version}`);
 
 try {
 	const config = getConfig();
-	const {action, args} = getArgs(process.argv);
+	const { action, args } = getArgs(process.argv);
 	const credentials = getCredentialsFromArgs(args);
-	
-	dispatchAction(action, {config, args, credentials})
+
+	dispatchAction(action, { config, args, credentials, argv: process.argv })
 		.then(() => {
 			logger.success(`Running "${action}"`);
 			logger.log('Done.');
@@ -25,7 +25,7 @@ try {
 	handleError(e);
 }
 
-function handleError({message}) {
+function handleError({ message }) {
 	logger.error(message);
 	process.exit(1);
 }
