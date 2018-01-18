@@ -2,7 +2,7 @@
 
 # Bitbucket Toolbox
 
-**Important** - This is experimental release that was migrated from a previous tool [checkee](https://github.com/kurtwagner/checkee)
+> **Important** - This is experimental release that was migrated from a previous tool [checkee](https://github.com/kurtwagner/checkee). It's currently only being utilised personally.
 
 Small collection of tools for automating tasks with Bitbucket's API.
 
@@ -49,6 +49,36 @@ One or more paths to Android Lint result XML files. This cannot be used in conju
 Exit on a non-zero code to indicate that a given severity was seen in a comment. For example, fail if a comment is made for an "error". This is useful if you wish to fail a build process only if a certain severity was introduced.
 
 Severities are case insensitive.
+
+## Scripts
+
+These are functions you configure that resolve from built in queries. For example, list all outstanding open pull requests, where you define what "outstanding" means.
+
+```javascript
+// file: .bitbucket-toolbox.js
+module.exports = {
+  scripts: {
+    outstanding: {
+      type: 'openPullRequests',
+      resolve: ({pullRequests}) => {
+        pullRequests.filter(isOutstanding)
+                    .forEach(printPullRequest);
+      }
+    }),
+  },
+};
+```
+This can be run with
+
+```
+bitbucket-toolbox run outstanding
+```
+
+The `resolve` function also accepts a `Promise` as a return value, if you wish to perform asynchronous action.
+
+### Script Types
+
+- `openPullRequests` - This is the only script type this supports. It passes `pullRequests` in an associative array to the `resolve` handler. Pull requests is a raw array of [pull requests from the bitbucket API](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests/%7Bpull_request_id%7D) with included changed chunks for the [diff](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/pullrequests/%7Bpull_request_id%7D/diff).
 
 ## Reviewers
 
