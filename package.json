@@ -4,7 +4,9 @@
 	"description": "Tools for automating tasks on bitbucket",
 	"main": "bin/bitbucket-toolbox.js",
 	"author": "Kurt Wagner",
+	"contributors": ["Victor Chan"],
 	"license": "MIT",
+	"repository": "github:KurtWagner/bitbucket-toolbox",
 	"scripts": {
 		"test": "eslint . && mocha lib/*.js lib/*/**.js tests/**/*.js",
 		"coveralls":
