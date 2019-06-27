@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"chai": "3.5.0",
 		"coveralls": "2.11.16",
-		"eslint": "3.13.1",
+		"eslint": "4.18.2",
 		"husky": "0.14.3",
 		"istanbul": "0.4.5",
 		"lint-staged": "4.3.0",
