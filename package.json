@@ -1,6 +1,6 @@
 {
 	"name": "bitbucket-toolbox",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"description": "Tools for automating tasks on bitbucket",
 	"main": "bin/bitbucket-toolbox.js",
 	"author": "Kurt Wagner",
