@@ -11,8 +11,8 @@
 	"repository": "github:KurtWagner/bitbucket-toolbox",
 	"scripts": {
 		"test": "eslint . && mocha lib/*.js lib/*/**.js tests/**/*.js",
-		"coveralls": "nyc --all --reporter=lcovonly mocha lib/*.js lib/*/**.js tests/**/*.js && cat ./coverage/lcov.info | coveralls",
-		"cover": "nyc --all --reporter=text mocha lib/*.js lib/*/**.js tests/**/*.js",
+		"coveralls": "nyc --all --exclude=tests/ --exclude=**/*.spec.js --exclude=.* --reporter=lcovonly mocha lib/*.js lib/*/**.js tests/**/*.js && cat ./coverage/lcov.info | coveralls",
+		"cover": "nyc --all --exclude=tests/ --exclude=**/*.spec.js --exclude=.* --reporter=text mocha lib/*.js lib/*/**.js tests/**/*.js",
 		"precommit": "lint-staged"
 	},
 	"engines": {
