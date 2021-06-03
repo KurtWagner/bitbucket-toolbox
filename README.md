@@ -18,6 +18,8 @@ Comments will only be left for lines located in the returned diff. This may not 
 
 ```
 > bitbucket-toolbox comments \
+        --repo-user your-team \
+	--repo-slug your-project \
 	--pull-request 10       \
 	--checkstyle path/to/result.xml;
 ```
@@ -34,7 +36,15 @@ Parses and leaves comments on a pull request for given lint results.
 
 ##### --pull-request
 
-The id of the pull request. This should match up with the user and repository slugs.
+The id of the pull request.
+
+##### --repo-slug
+
+The name of the repository that the pull request belongs to.
+
+##### --repo-user
+
+The user who owns the repository that the pull request belongs to.
 
 ##### --checkstyle
 
