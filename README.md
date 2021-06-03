@@ -27,7 +27,7 @@ Parses and leaves comments on a pull request for given lint results.
 #### Supported formats
 
 * [Android Lint Result XML](http://tools.android.com/tips/lint) with `--android-lint`
-* [Checkstyle Result XML](http://checkstyle.sourceforge.net/) with `--checkstyle`
+* [Checkstyle Result XML](https://checkstyle.sourceforge.io) with `--checkstyle`
  * _Needs examples of tools that have checkstyle formatters. e.g, eslint_ 
 
 #### Options
