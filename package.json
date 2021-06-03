@@ -49,10 +49,10 @@
 		"sinon": "11.1.1"
 	},
 	"dependencies": {
-		"chalk": "2.3.0",
-		"commander": "2.9.0",
+		"chalk": "4.1.1",
+		"commander": "7.2.0",
 		"node-emoji": "1.10.0",
-		"parse-diff": "0.4.0",
+		"parse-diff": "0.8.1",
 		"progress": "2.0.3",
 		"q": "1.5.1",
 		"request": "2.88.2",
