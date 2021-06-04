@@ -1,6 +1,6 @@
 {
 	"name": "bitbucket-toolbox",
-	"version": "0.0.10",
+	"version": "1.0.0",
 	"description": "Tools for automating tasks on bitbucket",
 	"main": "bin/bitbucket-toolbox.js",
 	"author": "Kurt Wagner",
@@ -11,12 +11,12 @@
 	"repository": "github:KurtWagner/bitbucket-toolbox",
 	"scripts": {
 		"test": "eslint . && mocha lib/*.js lib/*/**.js tests/**/*.js",
-		"coveralls": "nyc --all --reporter=lcovonly mocha lib/*.js lib/*/**.js tests/**/*.js && cat ./coverage/lcov.info | coveralls",
-		"cover": "nyc --all --reporter=text mocha lib/*.js lib/*/**.js tests/**/*.js",
+		"coveralls": "nyc --all --exclude=tests/ --exclude=**/*.spec.js --exclude=.* --reporter=lcovonly mocha lib/*.js lib/*/**.js tests/**/*.js && cat ./coverage/lcov.info | coveralls",
+		"cover": "nyc --all --exclude=tests/ --exclude=**/*.spec.js --exclude=.* --reporter=text mocha lib/*.js lib/*/**.js tests/**/*.js",
 		"precommit": "lint-staged"
 	},
 	"engines": {
-		"node": ">=6.0.0"
+		"node": ">=14.0.0"
 	},
 	"nyc": {
 		"exclude": [
@@ -32,27 +32,27 @@
 		"android-lint"
 	],
 	"devDependencies": {
-		"chai": "3.5.0",
-		"coveralls": "2.11.16",
-		"eslint": "4.18.2",
-		"husky": "0.14.3",
+		"chai": "4.3.4",
+		"coveralls": "3.1.0",
+		"eslint": "7.27.0",
+		"husky": "6.0.0",
 		"istanbul": "0.4.5",
-		"lint-staged": "4.3.0",
-		"mocha": "3.2.0",
+		"lint-staged": "11.0.0",
+		"mocha": "8.4.0",
 		"mocha-lcov-reporter": "1.3.0",
-		"mock-fs": "4.14.0",
-		"nock": "9.0.6",
-		"nyc": "10.1.2",
-		"prettier": "1.7.4",
-		"prettier-eslint": "8.2.1",
-		"prettier-eslint-cli": "4.4.0",
-		"sinon": "2.0.0"
+		"mock-fs": "5.0.0",
+		"nock": "13.1.0",
+		"nyc": "15.1.0",
+		"prettier": "2.3.0",
+		"prettier-eslint": "12.0.0",
+		"prettier-eslint-cli": "5.0.1",
+		"sinon": "11.1.1"
 	},
 	"dependencies": {
-		"chalk": "2.3.0",
-		"commander": "2.9.0",
+		"chalk": "4.1.1",
+		"commander": "7.2.0",
 		"node-emoji": "1.10.0",
-		"parse-diff": "0.4.0",
+		"parse-diff": "0.8.1",
 		"progress": "2.0.3",
 		"q": "1.5.1",
 		"request": "2.88.2",
